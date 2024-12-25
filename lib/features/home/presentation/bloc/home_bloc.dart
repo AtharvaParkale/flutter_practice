@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/core/common/entities/topic.dart';
 import 'package:flutter_practice/core/usecase/usecase.dart';
 import 'package:flutter_practice/features/home/domain/usecases/all_topics.dart';
 
@@ -20,13 +21,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     GetAllTopicsEvent event,
     Emitter<HomeState> emit,
   ) async {
+    emit(AllTopicsLoadingState());
     final res = await _allTopics(NoParams());
-    debugPrint('All topics :: $res');
 
-
-    // res.fold(
-    //       (l) => emit(BlogFailure(l.message)),
-    //       (r) => emit(BlogsDisplaySuccess(r)),
-    // );
+    res.fold(
+      (l) => emit(TopicFailureState(l.message)),
+      (r) => emit(AllTopicsDisplaySuccessState(r)),
+    );
   }
 }

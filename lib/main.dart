@@ -30,7 +30,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    context.read<HomeBloc>().add(GetAllTopicsEvent());
   }
 
   @override
