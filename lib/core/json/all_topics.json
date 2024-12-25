@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Clean Architecture in Flutter",
+    "image": "clean_architecture.png"
+  },
+  {
+    "id": "2",
+    "title": "SOLID Principles",
+    "image": "solid_principles.png"
+  },
+  {
+    "id": "3",
+    "title": "Feature First Approach of Clean Architecture",
+    "image": "feature_first.png"
+  },
+  {
+    "id": "4",
+    "title": "Streams in Flutter",
+    "image": "streams.png"
+  },
+  {
+    "id": "5",
+    "title": "Isolates in Flutter",
+    "image": "isolates.png"
+  },
+  {
+    "id": "6",
+    "title": "BuildContext in Flutter",
+    "image": "build_context.png"
+  },
+  {
+    "id": "7",
+    "title": "Animations in Flutter",
+    "image": "animations.png"
+  },
+  {
+    "id": "8",
+    "title": "Design Patterns in Flutter",
+    "image": "design_patterns.png"
+  },
+  {
+    "id": "9",
+    "title": "API Calls in Flutter",
+    "image": "api_calls.png"
+  },
+  {
+    "id": "10",
+    "title": "JSON Serialization",
+    "image": "json_serialization.png"
+  },
+  {
+    "id": "11",
+    "title": "Flutter / Firebase Integration",
+    "image": "firebase_integration.png"
+  },
+  {
+    "id": "12",
+    "title": "Refactoring",
+    "image": "refactoring.png"
+  }
+]

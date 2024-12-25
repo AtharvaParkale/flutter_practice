@@ -21,6 +21,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     Emitter<HomeState> emit,
   ) async {
     final res = await _allTopics(NoParams());
-    debugPrint('All topics :: ');
+    debugPrint('All topics :: $res');
+
+
+    // res.fold(
+    //       (l) => emit(BlogFailure(l.message)),
+    //       (r) => emit(BlogsDisplaySuccess(r)),
+    // );
   }
 }

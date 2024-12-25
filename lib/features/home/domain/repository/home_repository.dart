@@ -3,5 +3,5 @@ import 'package:flutter_practice/core/error/failures.dart';
 import 'package:fpdart/fpdart.dart';
 
 abstract class HomeRepository {
-  Future<Either<Failure, Topic>> allTopics();
+  Future<Either<Failure, List<Topic>>> allTopics();
 }

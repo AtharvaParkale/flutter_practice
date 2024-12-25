@@ -13,13 +13,12 @@ class HomeRepositoryImpl implements HomeRepository {
   );
 
   @override
-  Future<Either<Failure, Topic>> allTopics() async {
+  Future<Either<Failure, List<Topic>>> allTopics() async {
     try {
       final topics = await localDataSource.getAllTopics();
-      if (topics == null) {
+      if (topics == []) {
         return left(Failure('Topics not found'));
       }
-
       return right(topics);
     } on ServerException catch (e) {
       return left(Failure(e.message));
