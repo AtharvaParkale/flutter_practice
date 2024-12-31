@@ -16,12 +16,12 @@ class TopicModel extends Topic {
   }
 
   TopicModel copyWith({
-    String? id,
+    required int id,
     String? title,
     String? image,
   }) {
     return TopicModel(
-      id: id ?? this.id,
+      id: id,
       title: title ?? this.title,
       image: image ?? this.image,
     );

@@ -4,13 +4,22 @@ final serviceLocator = GetIt.instance;
 
 Future<void> initDependencies() async {
   _initHome();
+
+  final supabase = await Supabase.initialize(
+    url: AppSecrets.supabaseUrl,
+    anonKey: AppSecrets.supabaseAnonKey,
+  );
+
+  serviceLocator.registerLazySingleton(() => supabase.client);
 }
 
 void _initHome() {
   // Datasource
   serviceLocator
     ..registerFactory<HomeLocalDataSource>(
-      () => HomeLocalDataSourceImpl(),
+      () => HomeLocalDataSourceImpl(
+        serviceLocator(),
+      ),
     )
     // Repository
     ..registerFactory<HomeRepository>(
